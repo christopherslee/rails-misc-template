@@ -1,0 +1,7 @@
+- if flash.size > 0
+  - if flash.keys.first.to_s == "notice"
+    %div#flash.notice
+      %p= flash[flash.keys.first]
+  - elsif flash.keys.first.to_s == "error"
+    %div#flash.error
+      %p= flash[flash.keys.first]
